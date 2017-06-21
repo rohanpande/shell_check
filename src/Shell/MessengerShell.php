@@ -35,4 +35,11 @@ class MessengerShell extends Shell
         $this->out($message);
         Log::write('debug', $message);
     }
+
+    public function add($first, $second)
+    {
+      $result = $first + $second;
+      $this->out($result);
+      Log::write('debug', __('Added result is: {0} ', $result));
+    }
 }
